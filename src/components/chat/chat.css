@@ -1,0 +1,139 @@
+.main {
+    display: flex;
+    justify-content: center;
+    height: 90vh;
+    overflow: hidden; 
+}
+
+.gretting {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1vw; 
+}
+
+.empty_chat_message {
+    font-size: 2.5vw;
+    text-align: center;
+    color: rgb(150, 0, 150);
+    font-family: Gill Sans, sans-serif;
+    word-break: break-word; 
+}
+
+.placeForChat {
+    display: grid;
+    width: 85vw;
+    max-width: 100%;
+    grid-template-rows: 80vh 10vh;
+}
+
+.chatWithUser {
+    margin-left: 0.5vw;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+.userMessage {
+    display: grid;
+    grid-template-columns: 4vw 1fr;
+    padding: 0.3vw;
+    max-width: 100%;
+}
+
+.userAvatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1vh;
+    
+    font-size: 2vw;
+    font-family: Gill Sans, sans-serif;
+    color: rgb(150, 0, 150);
+
+    width: 3vw;
+    height: 3vw;
+
+    border: 1px solid;
+    border-radius: 50%;
+    overflow: hidden;
+
+    flex-shrink: 0;
+}
+
+.userText {
+    font-size: 1.3vw;
+    font-family: Gill Sans, sans-serif;
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word; 
+}
+
+.writeMessagePlace {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1vw;
+}
+
+.writeMessageInput {
+    font-size: 1.3vw;
+    width: 60vw;
+    max-width: 100%; 
+    height: 9vh;
+    resize: none;
+    box-sizing: border-box; 
+}
+
+@media all and (max-width: 768px) {
+
+    .empty_chat_message {
+        font-size: 5vw;
+    }
+
+    .placeForChat {
+        display: grid;
+        width: 85vw;
+        max-width: 100%; 
+        grid-template-rows: 76vh 14vh;
+    }
+
+    .chatWithUser {
+        margin-left: 0;
+    }
+
+    .userMessage {
+        grid-template-columns: 10vw 1fr; 
+        padding: 1vw;
+    }
+
+    .userAvatar {
+        width: 8vw;
+        height: 8vw;
+        font-size: 5vw;
+        margin-top: 1.5vh;
+    }
+
+    .userText {
+        font-size: 4vw;
+    }
+
+    .writeMessagePlace {
+        display: flex;
+        justify-content: center;
+        padding: 0 2vw; 
+    }
+    
+    .writeMessageInput {
+        font-size: 3vw;
+        width: 70vw;
+        max-width: 100%; 
+        height: 12vh;
+        resize: none;
+        box-sizing: border-box;
+    }    
+}

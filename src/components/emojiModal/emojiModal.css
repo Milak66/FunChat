@@ -1,0 +1,63 @@
+.emojiModal {
+    width: 25vw;
+    height: 25vh;
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+
+    position: absolute;
+    margin-left: 38vw;
+    margin-top: 2vh;
+    z-index: 400;
+
+    animation: dropBounce 0.9s ease-out forwards;
+}
+
+@keyframes dropBounce {
+    0% {
+        transform: translateY(-120vh);
+    }
+
+    60% {
+        transform: translateY(0);
+    }
+
+    70% {
+        transform: translateY(0) scaleY(0.9) scaleX(1.05);
+    }
+
+    80% {
+        transform: translateY(-20px) scaleY(1.05) scaleX(0.95);
+    }
+
+    90% {
+        transform: translateY(0) scaleY(0.97) scaleX(1.02);
+    }
+
+    100% {
+        transform: translateY(0) scale(1);
+    }
+}
+
+.emoji {
+    font-size: 5vw;
+    transition: transform 0.3s ease;
+}
+
+.green {
+    color: #2ecc71;
+}
+
+.red {
+    color: #e74c3c;
+}
+
+.emojiText {
+    text-align: center;
+    font-size: 1.2vw;
+}

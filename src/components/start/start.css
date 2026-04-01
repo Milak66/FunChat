@@ -1,0 +1,79 @@
+.start {
+    display: flex;
+    width: 100vw;
+    height: 10vh;
+    justify-content: center;
+    background-image: url('../../assets/modern-futuristic-neon-purple-background-free-vector.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: fixed; 
+    z-index: 100;
+}
+
+.menu {
+    width: 95vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logoOfSite {
+    display: flex;
+    align-items: center;
+}
+
+.siteName {
+    font-size: 2.5vw;
+    color: white;
+    font-family: Gill Sans, sans-serif;
+}
+
+.sitePic {
+    width: 5vw;
+}
+
+.btnsDiv {
+    display: flex;
+    width: 20vw;
+    justify-content: space-between;
+}
+
+.btn {
+    padding: 1vw;
+    color: white;
+    border-radius: 2vw;
+    font-size: 1.3vw;
+    background-color:rgb(150, 0, 150);
+    border: none;
+    cursor: pointer;
+}
+
+@media all and (max-width: 768px) {
+
+    .start {
+        height: 10vh;
+    }
+
+    .menu {
+        width: 95vw;
+    }
+    
+    .siteName {
+        font-size: 5vw;
+    }
+    
+    .sitePic {
+        width: 12vw;
+    }
+    
+    .btnsDiv {
+        width: 50vw;
+        gap: 1vw;
+    }
+    
+    .btn {
+        padding: 2.2vw;
+        border-radius: 6vw;
+        font-size: 3.5vw;
+    }
+}

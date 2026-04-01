@@ -1,0 +1,146 @@
+.userProfile {
+    position: relative;           
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    margin-right: 2vw;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    cursor: pointer;
+}
+
+.username {
+    font-size: 1.6vw;
+    color: white;
+    font-family: Gill Sans, sans-serif;
+}
+
+.profileAvatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vw;
+    font-family: Gill Sans, sans-serif;
+    color: rgb(150, 0, 150);
+    width: 3vw;
+    height: 3vw;              
+    border: 1px solid;
+    border-radius: 50%;
+    overflow: hidden;         
+}
+
+.profileSettings {
+    position: absolute;
+    top: 100%;
+    margin-top: 1vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vw;
+
+    width: 12vw;
+    padding: 1vw;
+
+    animation: moveProfileSettings 0.3s ease forwards;
+
+    background-color: rgb(66, 0, 127);
+    border-radius: 1vw;
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
+}
+
+.userFriendCode {
+    font-size: 1.5vw;
+    color: white;
+    padding: 0.5vw;
+    border: 1px rgb(150, 0, 150) solid;
+}
+
+.quitBtn {
+    padding: 1vw;
+    color: white;
+    font-size: 1.3vw;
+    background-color: rgb(150, 0, 150);
+    border: none;
+    cursor: pointer;
+    border-radius: 2vw;
+}
+
+.deleteBtn {
+    padding: 1vw;
+    color: white;
+    font-size: 1.3vw;
+    background-color: rgb(150, 0, 150);
+    border: none;
+    cursor: pointer;
+    border-radius: 2vw;
+}
+
+@keyframes moveProfileSettings {
+    from {
+        opacity: 0;
+        transform: translateY(-5vh);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media all and (max-width: 768px) {
+
+    .userProfile {
+        margin-right: 2vw;
+    }
+    
+    .profile {
+        gap: 2vw;
+    }
+    
+    .username {
+        font-size: 4.5vw;
+    }
+    
+    .profileAvatar {
+        font-size: 6vw;
+        width: 8vw;
+        height: 8vw;              
+        border: 1px solid;
+        border-radius: 50%;       
+    }
+    
+    .profileSettings {
+        top: 100%;
+        margin-top: 1vh;
+    
+        gap: 2vh;
+    
+        width: 30vw;
+        padding: 1vw;
+    
+        background-color: rgb(66, 0, 127);
+        border-radius: 3vw;
+        box-shadow: 0 0 15px rgba(0,0,0,0.4);
+    }
+    
+    .userFriendCode {
+        font-size: 3.5vw;
+        padding: 2vw;
+    }
+
+    .quitBtn {
+        padding: 2.5vw;
+        font-size: 4vw;
+        border-radius: 6vw;
+    }
+    
+    .deleteBtn {
+        padding: 2.5vw;
+        font-size: 4vw;
+        border-radius: 6vw;
+    }
+}

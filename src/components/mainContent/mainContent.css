@@ -1,0 +1,11 @@
+.mainContent {
+    display: grid;
+    grid-template-columns: 15vw 85vw;
+}
+
+@media all and (max-width: 768px) {
+
+    .mainContent {
+        grid-template-columns: 20vw 80vw;
+    }
+}

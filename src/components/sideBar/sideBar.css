@@ -1,0 +1,178 @@
+.sideBar {
+    border-right: 1px solid;
+}
+
+.sideBarHeader {
+    display: flex;
+    height: 7vh;
+    border-bottom: 1px solid;
+}
+
+.chatsSettings {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 9vw 6vw;
+    align-items: center;
+}
+
+.chatsTitle {
+    font-size: 1.5vw;
+    display: flex;
+    justify-content: flex-end;
+    color: rgb(150, 0, 150);
+    font-family: Gill Sans, sans-serif;
+}
+
+.addBtnPlace {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.addBtn {
+    padding: 0.7vw;
+    margin-right: 0.2vw;
+    color: white;
+    border-radius: 2vw;
+    font-size: 1.3vw;
+    background-color:rgb(150, 0, 150);
+    border: none;
+    cursor: pointer;
+}
+
+.chats {
+    height: 70vh;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.noChatsMessage {
+    font-size: 1.3vw;
+    display: flex;
+    height: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: rgb(150, 0, 150);
+    font-family: Gill Sans, sans-serif;
+}
+
+.singleChat {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1vw;
+    border-bottom: 1px solid;
+}
+
+.singleChatTitle {
+    font-size: 1.3vw;
+    color: rgb(150, 0, 150);
+    font-family: Gill Sans, sans-serif;
+}
+
+.userImg {
+    width: 4vw;
+    height: 4vh;
+}
+
+.enterUserCodePlace {
+    width: 20vw;
+    display: flex;
+    height: 100%;
+    background-color: white;
+    animation-name: moveCodePlace;
+    animation-duration: 1s;
+    align-items: center;
+    border-right:  1px solid;
+    border-bottom: 1px solid;
+    z-index: 100;
+}
+
+.codeInput{
+    width: 15vw;
+    height: 5vh;
+    border-radius: 3vw;
+}
+
+.submitImg {
+    width: 3vw;
+    cursor: pointer;
+}
+
+@keyframes moveCodePlace {
+    from {
+        opacity: 0;
+        transform: translateX(-2.5vw);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@media all and (max-width: 768px) {
+
+    .sideBar {
+        border-right: 1px solid;
+    }
+    
+    .sideBarHeader {
+        height: 7vh;
+        border-bottom: 1px solid;
+    }
+    
+    .chatsSettings {
+        grid-template-columns: 12vw 8vw;
+    }
+    
+    .chatsTitle {
+        font-size: 3.5vw;
+    }
+    
+    .addBtn {
+        padding: 0.7vw;
+        margin-right: 1vw;
+        border-radius: 4vw;
+        font-size: 4vw;
+    }
+    
+    .chats {
+        height: 70vh;
+    }
+    
+    .noChatsMessage {
+        font-size: 3vw;
+    }
+    
+    .singleChat {
+        padding: 1vw;
+        border-bottom: 1px solid;
+    }
+    
+    .singleChatTitle {
+        font-size: 3vw;
+        font-family: Gill Sans, sans-serif;
+    }
+    
+    .userImg {
+        width: 4vw;
+        height: 4vh;
+    }
+    
+    .enterUserCodePlace {
+        width: 40vw;
+        border-right:  1px solid;
+        border-bottom: 1px solid;
+    }
+    
+    .codeInput{
+        width: 25vw;
+        height: 5vh;
+        border-radius: 3vw;
+    }
+    
+    .submitImg {
+        width: 9vw;
+        cursor: pointer;
+    }
+}
