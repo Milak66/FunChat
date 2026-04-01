@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./Chat.css";
+import "./chat.css";
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "../store/store";
 import { onSetCurrentChat, onAddMessage } from "../reduser/reduser";
