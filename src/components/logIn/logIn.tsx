@@ -38,7 +38,7 @@ const LogIn: React.FC<LogInProps> = (): React.JSX.Element => {
     }
 
     try {
-      const response = await fetch("http://localhost:5999/addUser", {
+      const response = await fetch("https://chat-api-y8is.onrender.com/addUser", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -54,7 +54,6 @@ const LogIn: React.FC<LogInProps> = (): React.JSX.Element => {
         return;
       }
 
-      // Обновляем Redux
       dispatch(
         onSetUser({
           id: data.user._id,
@@ -69,10 +68,8 @@ const LogIn: React.FC<LogInProps> = (): React.JSX.Element => {
 
       dispatch(onSetUserStatus(true));
 
-      // Регистрируем пользователя на сокете
       socket.emit("register", data.user._id);
 
-      // Сохраняем в локалсторадж
       localStorage.setItem(
         "user",
         JSON.stringify({

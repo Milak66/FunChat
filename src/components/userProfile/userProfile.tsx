@@ -36,22 +36,19 @@ const UserProfile: React.FC<UserProfileProps> = (): React.JSX.Element => {
     if (!userId) return;
 
     try {
-      const response = await fetch("http://localhost:5999/deleteProfile", {
+      const response = await fetch("https://chat-api-y8is.onrender.com/deleteProfile", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ userId }),
       });
 
       if (response.ok) {
-        // Удаляем локально
         localStorage.removeItem("user");
         dispatch(onSetUserStatus(false));
 
-        // Отключаем сокет после удаления
         socket.disconnect();
 
-        // Можно показать сообщение
-        showEmoji(":(", "red", "Профиль удалён");
+        showEmoji(":)", "green", "Профиль удалён");
       } else {
         showEmoji(":(", "red", "Ошибка при удалении профиля");
       }

@@ -33,7 +33,7 @@ const ChatWithUser: React.FC = () => {
       if (!currentChatId) return;
 
       try {
-        const res = await fetch("http://localhost:5999/getChatById", {
+        const res = await fetch("https://chat-api-y8is.onrender.com/getChatById", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ chatId: currentChatId }),
@@ -84,7 +84,7 @@ const ChatWithUser: React.FC = () => {
     }
 
     try {
-      await fetch("http://localhost:5999/addMessage", {
+      await fetch("https://chat-api-y8is.onrender.com/addMessage", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

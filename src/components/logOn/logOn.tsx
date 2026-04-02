@@ -27,7 +27,7 @@ const LogOn: React.FC<LogOnProps> = (): React.JSX.Element => {
     }
 
     try {
-      const response = await fetch("http://localhost:5999/getUserByName", {
+      const response = await fetch("https://chat-api-y8is.onrender.com/getUserByName", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ nameToLogOn }),

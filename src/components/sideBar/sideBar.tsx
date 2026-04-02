@@ -52,7 +52,7 @@ const SideBar: React.FC<ChatsSideBarProps> = (): React.JSX.Element => {
     }
 
     try {
-      const response = await fetch("http://localhost:5999/addChat", {
+      const response = await fetch("https://chat-api-y8is.onrender.com/addChat", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -79,7 +79,7 @@ const SideBar: React.FC<ChatsSideBarProps> = (): React.JSX.Element => {
     if (!chatId) return;
 
     try {
-      const response = await fetch("http://localhost:5999/getChatById", {
+      const response = await fetch("https://chat-api-y8is.onrender.com/getChatById", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ chatId }),
